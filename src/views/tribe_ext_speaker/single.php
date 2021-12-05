@@ -1,12 +1,12 @@
 <?php
 /**
  * Single Instructor Template
- * The template for an instructor. It displays instructor information and lists
- * events that occur with the specified instructor.
+ * The template for an speaker. It displays speaker information and lists
+ * events that occur with the specified speaker.
  *
  * This view is based on /wp-content/plugins/events-calendar-pro/src/views/pro/single-organizer.php
  *
- * This template can be copied to [your-active-child-theme]/tribe-events/tribe_ext_instructor/single.php and then customized
+ * This template can be copied to [your-active-child-theme]/tribe-events/tribe_ext_speaker/single.php and then customized
  */
 
 // Do not allow loading directly or in an unexpected manner.
@@ -27,7 +27,7 @@ $post_type_key = $post->post_type;
 	<div class="tribe-events-<?php echo $post_type_key; ?>">
 		<p class="tribe-events-back">
 			<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"
-			   rel="bookmark"><?php printf( __( '&larr; Back to %s', 'tribe-ext-instructor-linked-post-type' ), tribe_get_event_label_plural() ); ?></a>
+			   rel="bookmark"><?php printf( __( '&larr; Back to %s', 'tribe-ext-speaker-linked-post-type' ), tribe_get_event_label_plural() ); ?></a>
 		</p>
 
 		<?php do_action( 'tribe_events_single_' . $post_type_key . '_before_item' ) ?>
@@ -56,7 +56,7 @@ $post_type_key = $post->post_type;
 			<?php } ?>
 
 		</div>
-		<!-- .tribe-events-instructor-meta -->
+		<!-- .tribe-events-speaker-meta -->
 		<?php do_action( 'tribe_events_single_' . $post_type_key . '_after_item' ) ?>
 
 		<!-- Upcoming event list -->
@@ -68,7 +68,7 @@ $post_type_key = $post->post_type;
 
 		<?php do_action( 'tribe_events_single_' . $post_type_key . '_after_upcoming_events' ) ?>
 
-	</div><!-- .tribe-events-tribe_ext_instructor -->
+	</div><!-- .tribe-events-tribe_ext_speaker -->
 	<?php
 	do_action( 'tribe_events_single_' . $post_type_key . '_after_template' );
 endwhile;
